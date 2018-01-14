@@ -1,0 +1,102 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "Booking and Payment",
+    "line": 1,
+    "id": "booking-and-payment",
+    "tags": [],
+    "uri": "features\\ryanair.feature",
+    "elements": [
+      {
+        "id": "booking-and-payment;booking-and-payment-method",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "Booking and Payment Method",
+        "tags": [
+          {
+            "name": "@ryanairScenario",
+            "line": 3
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "I am on ryanair page",
+            "match": {
+              "location": "stepdefinitions\\homePage.ts:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 413
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "I log in",
+            "match": {
+              "location": "stepdefinitions\\search.ts:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2439
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "I booking from \"POZ\" to \"DUB\" on \"02-02-2018\"",
+            "match": {
+              "location": "stepdefinitions\\search.ts:29"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10391
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "I pay for booking with credit card details \"5555555555555557\" expiry \"10\"-\"20\" and \"265\"",
+            "match": {
+              "location": "stepdefinitions\\booking.ts:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5472
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "I shold get declined message",
+            "match": {
+              "location": "stepdefinitions\\booking.ts:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3201
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "support\\hooks.ts:10"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
