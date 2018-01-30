@@ -8,7 +8,7 @@ const search: SearchPageObject = new SearchPageObject();
 let EC = ExpectedConditions;
 
 Given(/^I am on ryanair page$/, async () => {
-    await expect(browser.getCurrentUrl()).to.eventually.equal(" ");
+    await expect(browser.getCurrentUrl()).to.eventually.equal("https://www.ryanair.com/ie/en/");
     await expect(browser.getTitle()).to.eventually.equal("Official Ryanair website | Cheap flights from Ireland | Ryanair");
-    await element(by.css('cookie-pop-up>div>core-icon')).click();
+    await element(by.css('div.cookie-popup__close-btn>core-icon')).click();
 });
